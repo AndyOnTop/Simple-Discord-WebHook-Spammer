@@ -21,10 +21,10 @@ import time
 #prompts
 message = input("What do you want to spam?: ")
 webhookurl = Webhook(input("Enter webhook: "))
-delay = input("Enter a delay: ")
+delay = int(input("Enter a delay: "))
 
 #webhook spamming time
 while True:
-    time.sleep(1)
+    time.sleep(delay)
     webhookurl.send(message)
     print("Sent.")
